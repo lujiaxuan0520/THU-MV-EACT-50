@@ -1,36 +1,22 @@
-# THU<sup>E-ACT</sup>-50: A Real-World Event-Based Action Recognition Benchmark
+# THU<sup>MV-EACT</sup>-50: A Large-Scale Multi-View Event-Based Action Recognition Benchmark
 
-Introduced by the paper "[Action Recognition and Benchmark Using Event Cameras](https://ieeexplore.ieee.org/abstract/document/10198747)" in TPAMI 2023, **THU<sup>E-ACT</sup>-50** stands as a large-scale, real-world event-specific action recognition dataset with more than 4 times the size of the current largest event-based action recognition dataset. It contains 50 action categories and is primarily designed for whole-body motions and indoor healthcare applications. This repository provides access to the dataset, alongside detailed information about its contents and structure.
+Introduced by the paper, "[Hypergraph-Based Multi-View Action Recognition Using Event Cameras](https://ieeexplore.ieee.org/abstract/document/10480584/)" in TPAMI 2024, **THU<sup>MV-EACT</sup>-50** is a pioneering large-scale multi-view dataset for event-based action recognition, aiming to fulfill the gap in existing datasets which are often limited in action categories, data scale, and lack complexity for practical applications. The dataset is an extension of the single-view [**THU<sup>E-ACT</sup>-50**](https://github.com/lujiaxuan0520/THU-EACT-50),  providing a multi-view benchmark that enhances the dataset's applicability in real-world scenarios.
 
-<img src="figures/sample-sequences.jpg" alt="Sample-sequences" style="zoom: 33%;" />
+<img src="figures/dataset-v2.png" alt="Sample-sequences" style="zoom: 33%;" />
 
 ## Dataset Overview
 
-**THU<sup>E-ACT</sup>-50** is designed to address the limitations of existing event-based action recognition datasets, which are often too small and limited in the range of actions they cover. The dataset consists of two parts: the standard **THU<sup>E-ACT</sup>-50** and a more challenging version,**THU<sup>E-ACT</sup>-50 CHL**, which is designed to test the robustness of algorithms under challenging conditions.
+THU<sup>MV-EACT</sup>-50 stands out as the first multi-view dataset specifically designed for the event-based action recognition task. It incorporates the same 50 action categories as its predecessor, THU<sup>E-ACT</sup>-50, but extends the content to include 31,500 video recordings from **6** distinct viewpoints, offering a resolution of 1280x800. 
 
-The dataset comprises a diverse set of action categories, including whole-body motions, indoor healthcare applications, detail-oriented actions, confusing actions, human-object interactions, and two-player interactive movements. With a total of 10,500 video recordings for the standard **THU<sup>E-ACT</sup>-50** and 2,330 recordings for the challenging **THU<sup>E-ACT</sup>-50 CHL**, this dataset provides an extensive and varied collection of action sequences for researchers to explore and evaluate their models.
+The dataset was collected in an indoor venue approximately 100m² using CeleX-V cameras arranged to capture 6 viewpoints (4 frontal and 2 backward) of the action performer. The setup ensures comprehensive coverage of each action from multiple angles, enhancing the dataset's utility for multi-view action recognition tasks.
 
-## Dataset Description
+<img src="figures/dataset-v2-env.png" alt="Sample-sequences" style="zoom: 80%;" />
 
-### Standard THU<sup>E-ACT</sup>-50
-
-- 50 event-specific action categories
-- 105 socially recruited subjects
-- 10,500 video recordings
-- CeleX-V event camera with a spatial resolution of 1280x800
-- Two oblique front views of the actor
-
-### Challenging THU<sup>E-ACT</sup>-50 CHL
-
-- Challenging scenarios with different illumination conditions and action magnitudes
-- 50 event-specific action categories
-- 18 on-campus students as subjects
-- 2,330 video recordings
-- DAVIS346 event camera with a spatial resolution of 346x260
-- Front, left, right, and back views
-- Two different scenarios: long corridor and open hall
-- Challenging conditions including:
-<img src="figures/different-light.jpg" alt="Different-light" style="zoom:18%;" />
+## Dataset Highlights
+- **50 action categories:** Includes a broad spectrum of actions relevant to indoor health monitoring, whole-body movements, and interactions.
+- **~31,500 video recordings:** Enormously expands the data available for event-based action recognition research.
+- **6 viewpoints:** Captures actions from 4 frontal and 2 backward views, offering a comprehensive multi-view perspective.
+- **Diverse participant demographic:** Features 105 socially recruited subjects, covering a wide age range of males and females (15-72 years).
 
 ## List of Actions
 
@@ -49,40 +35,17 @@ The dataset comprises a diverse set of action categories, including whole-body m
 
 ## Evaluation Criteria
 
-To evaluate the performance of event-based action recognition methods on the **THU<sup>E-ACT</sup>-50** and **THU<sup>E-ACT</sup>-50 CHL**  datasets, we divided the subjects in a ratio of 8:2 to create disjoint identity sets for training and testing. The training and test sets of the **THU<sup>E-ACT</sup>-50** dataset contain 85 and 20 persons, respectively, while the training and test sets of the **THU<sup>E-ACT</sup>-50 CHL** dataset contain 14 and 4 persons, respectively.
-
-We report the following evaluation metrics for each dataset:
-
-- **Top-1 Accuracy:** The percentage of test videos for which the model correctly predicts the action category with the highest confidence.
-- **Top-N Accuracy:** The percentage of test videos for which the correct action category is within the top N predictions made by the model.
+The dataset employs Top-1, Top-3, and Top-5 accuracy metrics for evaluating the performance of event-based action recognition methods. It supports both cross-subject and cross-view experimental settings to assess the generalization ability of proposed methods across different subjects and unseen viewpoints.
 
 ## Dataset Download
 
-We're pleased to announce the release of the **THU<sup>E-ACT</sup>-50** and **THU<sup>E-ACT</sup>-50 CHL** datasets. 
+Download links for THU<sup>MV-EACT</sup>-50 will be available soon.
 
-### **THU<sup>E-ACT</sup>-50**
-
-+ **OneDrive:** [Download Here](https://mailstsinghuaeducn-my.sharepoint.com/:u:/g/personal/lujx20_mails_tsinghua_edu_cn/EVAfzCmMfH9KtQhHh37hCFIBXrszDqLXtOfjBir2__GTjg?e=rnUht0)
-+ **BaiduYun:** [Download Here](https://pan.baidu.com/s/1ohCswORXFMyEho3A6nKnSg) (Access Code: `4csp`) 
-
-*Note*: After decompression, the dataset will require about 332GB of storage space.
-
-### **THU<sup>E-ACT</sup>-50 CHL**
-
-+ **Google Drive:** [Download Here](https://drive.google.com/file/d/1a5r6cw0nVX0Xe-ZzVLAhEwa9oMm4MUbS/view?usp=sharing) 
-+ **BaiduYun:** [Download Here](https://pan.baidu.com/s/1R6Q2U5By_h16S_TdkCRM4A) (Access Code: `fdnd`) 
-
-*Note*: After decompression, the dataset will occupy approximately 4.6GB of storage space.
+*Note*: After decompression, the dataset will require about 1.1TB of storage space.
 
 ## Dataset Format
 
-In the two datasets, the division for training and test sets can be found in the `train.txt` and `test.txt` files, respectively.  Each line consists of **File Name** and **Action ID**.
-
-The preprocessing operations for the 2 datasets can be found in `dataset.py`.
-
-### **THU<sup>E-ACT</sup>-50**
-
-In the THU-EACT-50 dataset, which is provided in the .csv format, the data is structured with 5 columns as follows:
+The event data  is provided in the .csv format, the data is structured with 5 columns as follows:
 
 + y: Represents the y-coordinate of the event.
 + x: Represents the x-coordinate of the event.
@@ -90,29 +53,65 @@ In the THU-EACT-50 dataset, which is provided in the .csv format, the data is st
 + p: The polarity value. It contains three categories: 1, -1, and 0. In our experiments, we ignore the 0 values and consider 1 as positive polarity and -1 as negative polarity.
 + t: Represents the timestamp of the event.
 
-### **THU<sup>E-ACT</sup>-50 CHL**
+### Cross-Subject
 
-For the THU-EACT-50-CHL dataset, which is available in the .npy format, each line contains 4 elements:
+In the Cross-Subject setting, the dataset is divided in a way that ensures the subjects in the training, validation, and test sets are mutually exclusive.
 
-+ x: Represents the x-coordinate of the event.
-+ y: Represents the y-coordinate of the event.
-+ t: Represents the timestamp of the event.
-+ p: The polarity value. In this dataset, the polarity only includes standard values of 1 and 0. Here, 1 represents positive polarity, and 0 represents negative polarity.
+- **Training set:** Comprises 85 subjects, representing 80% of the total subjects. 
+- **Validation set:** Consists of 10 subjects, which is 10% of the subjects.
+- **Test set:** Also includes 10 subjects, equating to the remaining 10% of participants..
+
+The data for each set is provided in specific pickle files, named accordingly:
+
+- `train_all_views.pkl` for the training set
+- `val_all_views.pkl` for the validation set
+- `test_all_views.pkl` for the test set
+
+### Cross-View
+
+The Cross-View setting addresses a different aspect of generalizability: the model's ability to recognize actions from unseen viewpoints. The dataset division for Cross-View experiments is as follows:
+
+- **Training set:**  Uses data from 4 specific views (View #0, #1, #2, and #4).
+- **Validation set:** Solely comprises View #3.
+- **Test set:** Solely comprises View #5.
+
+For the Cross-View experimental setup, the respective pickle files are named:
+
+- `train_cross_views.pkl` for training data across the selected views
+- `val_cross_views.pkl` for validation data from View #3
+- `test_cross_views.pkl` for test data from View #5
+
+The preprocessing operations for the 2 modes can be found in `dataset.py`.
 
 ## Acknowledgements
 
 We would like to express our sincere gratitude to Tsinghua University, partner companies, and organizations for their invaluable support and collaboration in making this dataset possible. Additionally, we extend our thanks to all the volunteers who participated in the data collection process. Their contributions have been instrumental in the development and evaluation of this benchmark.
 
+## License
+
+This dataset is licensed under the MIT License.
+
 ## Citing Our Work
 
-If you find this dataset beneficial for your research, please cite our work:
+If you find this dataset beneficial for your research, please cite our works:
 
 ```bibtex
+@article{gao2024hypergraph,
+  title={Hypergraph-Based Multi-View Action Recognition Using Event Cameras},
+  author={Gao, Yue and Lu, Jiaxuan and Li, Siqi and Li, Yipeng and Du, Shaoyi},
+  journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
+  year={2024},
+  publisher={IEEE}
+}
+
 @article{gao2023action,
   title={Action Recognition and Benchmark Using Event Cameras},
   author={Gao, Yue and Lu, Jiaxuan and Li, Siqi and Ma, Nan and Du, Shaoyi and Li, Yipeng and Dai, Qionghai},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2023},
+  volume={45},
+  number={12},
+  pages={14081-14097},
   publisher={IEEE}
 }
 ```
