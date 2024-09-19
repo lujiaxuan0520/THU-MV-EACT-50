@@ -1,5 +1,7 @@
 # THU<sup>MV-EACT</sup>-50: A Large-Scale Multi-View Event-Based Action Recognition Benchmark
 
+**News Update**: The dataset is now available! You can download it from [THU<sup>MV-EACT</sup>-50](https://download.moon-lab.tech:20443/datasets/THU-MV-EACT-50.tar.gz).
+
 Introduced by the paper, "[Hypergraph-Based Multi-View Action Recognition Using Event Cameras](https://ieeexplore.ieee.org/abstract/document/10480584/)" in TPAMI 2024, **THU<sup>MV-EACT</sup>-50** is a pioneering large-scale multi-view dataset for event-based action recognition, aiming to fulfill the gap in existing datasets which are often limited in action categories, data scale, and lack complexity for practical applications. The dataset is an extension of the single-view [**THU<sup>E-ACT</sup>-50**](https://github.com/lujiaxuan0520/THU-EACT-50),  providing a multi-view benchmark that enhances the dataset's applicability in real-world scenarios.
 
 <img src="figures/dataset-v2.png" alt="Sample-sequences" style="zoom: 33%;" />
@@ -39,7 +41,7 @@ The dataset employs Top-1, Top-3, and Top-5 accuracy metrics for evaluating the 
 
 ## Dataset Download
 
-Download links for THU<sup>MV-EACT</sup>-50 will be available soon.
+The dataset is now available at [THU<sup>MV-EACT</sup>-50](https://download.moon-lab.tech:20443/datasets/THU-MV-EACT-50.tar.gz).
 
 *Note*: After decompression, the dataset will require about 1.1TB of storage space.
 
@@ -101,6 +103,9 @@ If you find this dataset beneficial for your research, please cite our works:
   author={Gao, Yue and Lu, Jiaxuan and Li, Siqi and Li, Yipeng and Du, Shaoyi},
   journal={IEEE Transactions on Pattern Analysis and Machine Intelligence},
   year={2024},
+  volume={46},
+  number={10},
+  pages={6610-6622},
   publisher={IEEE}
 }
 
